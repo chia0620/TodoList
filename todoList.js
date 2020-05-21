@@ -36,9 +36,9 @@ var vm = new Vue({
     },
     data: {
         items: [
-            { title: 'happy', complete: false },
-            { title: 'bad', complete: true },
-            { title: 'sad', complete: false },
+            { title: '餵貓', complete: false },
+            { title: '與教授聯絡', complete: false },
+            { title: '購買日常用品', complete: true },
         ],
         addItem: "",
         editTitle: ""
