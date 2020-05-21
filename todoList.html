@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="todoList.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>To do List</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>To do List</h1>
+        <div class="form-inline w-100 p-relative">
+            <input type="text"
+                   id="add-input"
+                   v-model="addItem"
+                   v-on:keyup.enter="addItems">
+        </div>
+        <ul class="w-100">
+            <component-a v-for="(item,index) in items"
+                         v-bind:item="item"
+                         v-on:edit-item-button="editItem(index)"
+                         v-on:delete-item="deleteItem(index)"
+                         v-on:save-button="saveEditItem(index)"
+                         v-on:cancel-edit-button="cancelEditItem(index)"
+                         v-model="editTitle"></component-a>
+        </ul>
+    </div>
+
+    <script src="todoList.js"></script>
+</body>
+
+</html>

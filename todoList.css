@@ -1,0 +1,188 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#app, button {
+    font-family: '微軟正黑體';
+    user-select: none;
+    font-size: 16px;
+}
+
+div#app {
+    width: 35%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #eeeeee;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-inline {
+    padding: 10px;
+}
+
+.form-inline>* {
+    display: inline-block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+input[type="text"] {
+    border: unset;
+    border-bottom: solid 1px #cdcdcd;
+    padding: 5px 10px;
+    width: 60%;
+    font-size: 1rem;
+    position: relative;
+    top: -0.6rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: #f6f6f6;
+}
+
+input[type="checkbox"] {
+    outline: none;
+    -webkit-appearance: unset;
+    border: solid 2px #e2e1e1;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    margin-top: -1.5px;
+    margin-left: 5px;
+    border-left: solid 4px #b7ddb0;
+    border-bottom: solid 4px #b7ddb0;
+    border-radius: 2px;
+    height: 0.5rem;
+    width: 1.2rem;
+    transform: rotate(-45deg);
+}
+
+#add-input {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 5px 10px;
+    position: relative;
+    top: -0.6rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px 0px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+li {
+    padding: 10px;
+    height: 30px;
+}
+
+button.delete-button {
+    display: block;
+    border: unset;
+    background-color: unset;
+    right: 5px;
+    width: 1rem;
+    height: 100%;
+    position: relative;
+}
+
+button.save-button {
+    padding: unset;
+    display: block;
+    border: unset;
+    background-color: unset;
+    right: 10px;
+    top: 5px;
+    position: relative;
+    border-left: solid 4px black;
+    border-bottom: solid 4px black;
+    height: 11px;
+    width: 15px;
+    transform: rotate(-45deg);
+}
+
+button.save-button:hover {
+    border-left: solid 4px #bbbbbb;
+    border-bottom: solid 4px #bbbbbb;
+}
+
+.delete-button::before, .delete-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, 0);
+    transition: all .2s;
+    background-color: black;
+}
+
+.delete-button::before, .delete-button::after {
+    height: 3px;
+    width: 1rem;
+    left: 0;
+}
+
+.delete-button::before {
+    transform: rotate(45deg);
+}
+
+.delete-button::after {
+    transform: rotate(-45deg);
+}
+
+.delete-button:hover::before, .delete-button:hover::after {
+    background-color: #bbbbbb;
+}
+
+button {
+    margin: 0px 5px;
+    border: solid 1px #cdcdcd;
+    padding: 5px 10px;
+    background: #f6f6f6;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all .3s;
+}
+
+button:hover {
+    background: #fff;
+    outline: none;
+}
+
+.float-bottom label {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
